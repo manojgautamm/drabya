@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <link rel="stylesheet" type="text/css" href="sayhi/css-file/ionicons.min.css">
+      <link rel="stylesheet" type="text/css" href="sayhi/css-file/style.css">
+      <link rel="stylesheet" type="text/css" href="sayhi/css-file/grid.css">
+      <link rel="stylesheet" type="text/css" href="sayhi/css-file/queries.css">
+      <link rel="stylesheet" type="text/css" href="sayhi/css-file/animate.css">
+      <link rel="stylesheet" type="text/css" href="sayhi/css-file/normalize.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100&display=swap" rel="stylesheet">
+	  
+
+	  
+      <title>Say Hi- Drabya</title>
+  </head>
+	<body>
+		<header>
+          <nav>
+              <div class="row">
+				  <a href="index.html"><img src="img/astra-logo.png" alt="astra logo" class="logo"/></a>
+				  <ul class="main-nav js--main-nav">
+					  <li><a href="index.html" >Home</a></li>
+					  <li><a href="about.html" >About Me</a></li>
+					  <li><a href="sayhi.php" >Say Hi</a></li>
+					  <li><a href="#" >Patreon</a></li>
+				  </ul>
+				  
+				  <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+              </div>
+          </nav>
+          
+    </header>
+		
+	<section class="section-form" id="form">
+            <div class="row">
+                <h2>We'd love to hear from you</h2>
+            </div>
+            
+            <div class="row">
+                <form method="post" action="mailer-new.php" class="contact-form">
+					
+					<div class="row distance">
+						
+						<?php
+							if($_GET['success'] == 1) {
+								echo "<div class=\"form-messages success\">Thank you for your message. This should make my day :) </div>";
+							}	
+
+							if($_GET['success'] == -1) {
+								echo "<div class=\"form-messages error\">Oops, something went wrong please try again :( </div>";
+							}	
+   						?>
+					
+					</div>
+					
+					<div class="row distance">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required> 
+                        </div>
+                    </div>
+       
+                    
+                    <div class="row distance">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required> 
+                        </div>
+                    </div>
+                    
+                    <div class="row distance">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">Your words</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"> </textarea>
+                                
+                        </div>
+                    </div>
+                    <div class="row distance">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it!">
+                                
+                        </div>
+                    </div>
+                    
+    
+                </form>
+            
+            </div>
+
+        
+    </section>
+
+	<footer>
+			<div class="row">
+				<div class="col span-1-of-2 sticky">
+					<ul class="social-links">
+						<li><a href="#" target="_blank"><i class="ion-social-facebook"></i></a></li>
+						<li><a href="#" target="_blank"><i class="ion-social-twitter"></i></a></li>
+						<li><a href="#" target="_blank"><i class="ion-social-instagram"></i></a></li>
+						<li><a href="#" ><p>&copy;2020 by Astraga</p></a></li>
+
+					</ul>
+				</div>
+
+			</div>
+	</footer>
+		
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+			<script src="java/jquery.waypoints.min.js"></script>
+			<script src="java/script.js"></script>
+
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-61026110-2', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
+
+		
+
+	
+	</body>
+
+
+</html>
